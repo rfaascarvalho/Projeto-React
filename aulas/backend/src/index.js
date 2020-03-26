@@ -6,10 +6,10 @@ const cors = require('cors');
 // Importar as rotas
 const routes = require('./routes');
 
-// Variavel que vai armazenar minha aplicaçao
+// Variavel que vai armazenar minha aplicaçao.
 const app = express();
 
-// Antes de todas as requisaçoes estou falando para 
+// Antes de todas as requisaçoes estou falando para .
 // o express ir no corpo da minha requisao e converter
 // o JSON em objeto javascript
 app.use(cors());
