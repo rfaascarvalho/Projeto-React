@@ -13,7 +13,9 @@ export default function Detail(){
     const route = useRoute();
 
     const incident = route.params.incident;
-    const message = 'Ola , es entrando em contato, gostaria de ajudar';
+    const message = `Olá ${incident.name}, 
+    estou entrando em contato pois gostaria de ajudar no caso "${incident.title}" com o valor de ${Intl.NumberFormat('pt-BR', {style: 'currency', 
+    currency: 'BRL'}).format(incident.value)}`;
 
     function navigateBack() {
         navigation.goBack()
@@ -43,7 +45,7 @@ export default function Detail(){
 
             <View style={styles.incident}>
                 <Text style={styles.incidentProperty}>ONG</Text>
-                <Text style={styles.incidentValue}>{incident.name} de {incident.cty}/{incident.uf}</Text>
+                <Text style={styles.incidentValue}>{incident.name} de {incident.city}/{incident.uf}</Text>
 
                 <Text style={styles.incidentProperty}>Caso</Text>
                 <Text style={styles.incidentValue}>{incident.title}</Text>
